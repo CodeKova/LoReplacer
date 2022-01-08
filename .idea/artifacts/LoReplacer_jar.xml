@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LoReplacer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LoReplacer_jar</output-path>
+    <root id="archive" name="LoReplacer.jar">
+      <element id="module-output" name="LoReplacer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../dependencies/bungeecord-chat-1.16-R0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../dependencies/spigot-api-1.16.5.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
