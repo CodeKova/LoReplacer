@@ -1,0 +1,10 @@
+main: com.codekova.loreplacer.LoReplacer
+name: LoReplacer
+version: 1.0
+author: CodeKova
+commands:
+  loreplace:
+    description: Show LoReplacer commands.
+    prmission: loreplace.admin
+    usage: /<command>
+    aliases: lr
