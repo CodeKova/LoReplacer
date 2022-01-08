@@ -55,7 +55,6 @@ public class Loreplace_rename implements CommandExecutor {
             targetPlayer.getInventory().setItemInMainHand(item);
             return true;
 
-
         }
 
         return true;

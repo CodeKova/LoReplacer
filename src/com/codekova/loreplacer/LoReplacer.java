@@ -19,6 +19,7 @@ public class LoReplacer extends JavaPlugin {
 
         public void onEnable(){
 
+
             instance = this;
             msgConfig = loadCustomConfig("messages.yml", new File(getDataFolder(),"messages.yml"));
             getCommand("loreplace").setExecutor(new Loreplace());
