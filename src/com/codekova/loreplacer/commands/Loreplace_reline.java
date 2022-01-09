@@ -3,6 +3,7 @@ package com.codekova.loreplacer.commands;
 import com.codekova.loreplacer.LoReplacer;
 import com.codekova.loreplacer.resources.HexFormatter;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -49,7 +50,7 @@ public class Loreplace_reline implements CommandExecutor {
                 ItemStack item = targetPlayer.getInventory().getItemInMainHand();
                 ItemMeta itemMeta = item.getItemMeta();
                 List<String> itemLore = itemMeta.getLore();
-                String Searchline = HexFormatter.format(args[2].replaceAll("@"," "));
+                String Searchline = ChatColor.stripColor(HexFormatter.format(args[2].replaceAll("@"," ")));
                 StringBuilder replaceLineBuilder = new StringBuilder();
                 for(int i = 3; i < args.length; i++)
                 {
@@ -67,7 +68,7 @@ public class Loreplace_reline implements CommandExecutor {
                 }
                 for(int i = 0;i < itemLore.size(); i++)
                 {
-                    if(itemLore.get(i).toLowerCase().contains(Searchline.toLowerCase()))
+                    if(ChatColor.stripColor(itemLore.get(i)).toLowerCase().contains(Searchline.toLowerCase()))
                     {
                         itemLore.set(i,replaceLine);
                         break;
@@ -98,7 +99,7 @@ public class Loreplace_reline implements CommandExecutor {
             ItemStack item = targetPlayer.getInventory().getItemInMainHand();
             ItemMeta itemMeta = item.getItemMeta();
             List<String> itemLore = itemMeta.getLore();
-            String Searchline = HexFormatter.format(args[2].replaceAll("@"," "));
+            String Searchline = ChatColor.stripColor(HexFormatter.format(args[2].replaceAll("@"," ")));
             StringBuilder replaceLineBuilder = new StringBuilder();
             for(int i = 3; i < args.length; i++)
             {
@@ -116,7 +117,7 @@ public class Loreplace_reline implements CommandExecutor {
             }
             for(int i = 0;i < itemLore.size(); i++)
             {
-                    if(itemLore.get(i).toLowerCase().contains(Searchline.toLowerCase()))
+                if(ChatColor.stripColor(itemLore.get(i)).toLowerCase().contains(Searchline.toLowerCase()))
                     {
                         itemLore.set(i,replaceLine);
                         break;

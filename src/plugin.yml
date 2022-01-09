@@ -1,6 +1,6 @@
 main: com.codekova.loreplacer.LoReplacer
 name: LoReplacer
-version: 1.1
+version: 1.2
 author: CodeKova
 commands:
   loreplace:
